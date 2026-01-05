@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut Title="BluOS NAD C399" Comment="BluOS API v1.7 - Complete Integration for NAD C399 with MDC2 BluOS-D" Address="http://192.168.1.100:11000" CmdInit="" CloseAfterSend="true" CmdSep="">
+	<Info templateType="3" minVersion="12021201"/>
+
+	<!-- ==================== BASIC PLAYBACK CONTROL ==================== -->
+	<VirtualOutCmd Title="Play" Comment="Start playback" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Pause" Comment="Pause playback" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Pause" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Pause Toggle" Comment="Toggle pause/play state" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Pause?toggle=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Stop" Comment="Stop playback" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Stop" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Next Track" Comment="Skip to next track" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Skip" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Previous Track" Comment="Go to previous track" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Back" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== VOLUME CONTROL ==================== -->
+	<VirtualOutCmd Title="Volume Set" Comment="Set volume level (0-100%)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?level=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="true" Repeat="0" RepeatRate="0" SourceValHigh="100" DestValHigh="100"/>
+	<VirtualOutCmd Title="Volume Up 0.5dB" Comment="Increase volume by 0.5dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=0.5" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Down 0.5dB" Comment="Decrease volume by 0.5dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=-0.5" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Up 1dB" Comment="Increase volume by 1dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Down 1dB" Comment="Decrease volume by 1dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Up 2dB" Comment="Increase volume by 2dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=2" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Down 2dB" Comment="Decrease volume by 2dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=-2" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Up 5dB" Comment="Increase volume by 5dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=5" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Volume Down 5dB" Comment="Decrease volume by 5dB" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?db=-5" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="1" RepeatRate="0.5"/>
+	<VirtualOutCmd Title="Mute On" Comment="Mute audio output" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?mute=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Mute Off" Comment="Unmute audio output" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume?mute=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== REPEAT & SHUFFLE ==================== -->
+	<VirtualOutCmd Title="Repeat Off" Comment="Disable repeat" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Repeat?state=2" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Repeat Queue" Comment="Repeat entire queue" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Repeat?state=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Repeat Track" Comment="Repeat current track" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Repeat?state=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Shuffle On" Comment="Enable shuffle mode" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Shuffle?state=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Shuffle Off" Comment="Disable shuffle mode" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Shuffle?state=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== PRESETS (1-40) ==================== -->
+	<VirtualOutCmd Title="Preset 1" Comment="Activate preset 1" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 2" Comment="Activate preset 2" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=2" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 3" Comment="Activate preset 3" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=3" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 4" Comment="Activate preset 4" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=4" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 5" Comment="Activate preset 5" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=5" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 6" Comment="Activate preset 6" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=6" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 7" Comment="Activate preset 7" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=7" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 8" Comment="Activate preset 8" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=8" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 9" Comment="Activate preset 9" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=9" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 10" Comment="Activate preset 10" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=10" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 11" Comment="Activate preset 11" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=11" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 12" Comment="Activate preset 12" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=12" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 13" Comment="Activate preset 13" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=13" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 14" Comment="Activate preset 14" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=14" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 15" Comment="Activate preset 15" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=15" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 16" Comment="Activate preset 16" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=16" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 17" Comment="Activate preset 17" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=17" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 18" Comment="Activate preset 18" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=18" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 19" Comment="Activate preset 19" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=19" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 20" Comment="Activate preset 20" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=20" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 21" Comment="Activate preset 21" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=21" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 22" Comment="Activate preset 22" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=22" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 23" Comment="Activate preset 23" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=23" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 24" Comment="Activate preset 24" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=24" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 25" Comment="Activate preset 25" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=25" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 26" Comment="Activate preset 26" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=26" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 27" Comment="Activate preset 27" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=27" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 28" Comment="Activate preset 28" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=28" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 29" Comment="Activate preset 29" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=29" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 30" Comment="Activate preset 30" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=30" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 31" Comment="Activate preset 31" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=31" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 32" Comment="Activate preset 32" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=32" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 33" Comment="Activate preset 33" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=33" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 34" Comment="Activate preset 34" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=34" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 35" Comment="Activate preset 35" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=35" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 36" Comment="Activate preset 36" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=36" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 37" Comment="Activate preset 37" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=37" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 38" Comment="Activate preset 38" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=38" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 39" Comment="Activate preset 39" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=39" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset 40" Comment="Activate preset 40" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=40" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset Next" Comment="Switch to next preset" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=+1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Preset Previous" Comment="Switch to previous preset" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Preset?id=-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== QUEUE MANAGEMENT ==================== -->
+	<VirtualOutCmd Title="Clear Queue" Comment="Clear entire playback queue" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Clear" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Queue Add URL" Comment="Add URL to queue (requires url parameter)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Add?url=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Queue Delete Track" Comment="Delete track from queue (requires id parameter)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Delete?id=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Queue Save Playlist" Comment="Save current queue as playlist (requires name parameter)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Save?name=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Queue Move Track" Comment="Move track in queue (requires id and pos parameters)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Move?id=&lt;v&gt;&amp;pos=&lt;v2&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== INPUT SELECTION ==================== -->
+	<VirtualOutCmd Title="Input Optical" Comment="Switch to optical input (SPDIF)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?inputTypeIndex=spdif-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Input Coaxial" Comment="Switch to coaxial input" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?inputTypeIndex=coax-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Input Analog" Comment="Switch to analog input" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?inputTypeIndex=analog-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Input Bluetooth" Comment="Switch to Bluetooth input" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?inputTypeIndex=bluetooth-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Input HDMI ARC" Comment="Switch to HDMI ARC input" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?inputTypeIndex=arc-1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== BLUETOOTH AUDIO MODES ==================== -->
+	<VirtualOutCmd Title="Bluetooth Manual Mode" Comment="Bluetooth manual connect mode" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/audiomodes?bluetoothAutoplay=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Bluetooth Auto Mode" Comment="Bluetooth auto-play on connect" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/audiomodes?bluetoothAutoplay=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Bluetooth Guest Mode" Comment="Bluetooth guest mode (auto-disconnect)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/audiomodes?bluetoothAutoplay=2" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Bluetooth Disable" Comment="Disable Bluetooth completely" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/audiomodes?bluetoothAutoplay=3" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== ADVANCED PLAYBACK ==================== -->
+	<VirtualOutCmd Title="Play with Seek" Comment="Start playback at specific position (requires seek parameter in seconds)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?seek=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Play Direct URL" Comment="Play direct URL (requires url parameter)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Play?url=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Skip with Seek" Comment="Skip to position in current track (requires seek parameter in seconds)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Skip?seek=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== POWER MANAGEMENT ==================== -->
+	<VirtualOutCmd Title="Standby" Comment="Put player in standby mode" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Standby" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Sleep Timer 30min" Comment="Set sleep timer to 30 minutes" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Sleep?timeout=30" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Sleep Timer 60min" Comment="Set sleep timer to 60 minutes" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Sleep?timeout=60" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Sleep Timer 90min" Comment="Set sleep timer to 90 minutes" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Sleep?timeout=90" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Sleep Timer Cancel" Comment="Cancel active sleep timer" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Sleep?timeout=0" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== PLAYER GROUPING (Multi-Room) ==================== -->
+	<VirtualOutCmd Title="Add Secondary Player" Comment="Add secondary player to group (requires slave parameter with IP)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/AddSlave?slave=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Remove Secondary Player" Comment="Remove secondary player from group (requires slave parameter with IP)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/RemoveSlave?slave=&lt;v&gt;" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== STATUS QUERIES ==================== -->
+	<VirtualOutCmd Title="Get Status" Comment="Get current player status (XML response)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Status" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Status Long Poll" Comment="Get status with long polling (waits for change, timeout 100s)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Status?timeout=100" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Sync Status" Comment="Get synchronized status (XML response)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/SyncStatus" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Sync Status Long Poll" Comment="Get sync status with long polling (waits for change, timeout 100s)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/SyncStatus?timeout=100" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Volume" Comment="Get current volume level (XML response)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Volume" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Presets" Comment="Get list of all presets (XML response)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Presets" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Get Playlist" Comment="Get current playlist/queue (XML response)" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Playlist?length=100" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+
+	<!-- ==================== SPECIAL FEATURES ==================== -->
+	<VirtualOutCmd Title="Doorbell Chime" Comment="Play doorbell chime sound" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/Doorbell?play=1" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+</VirtualOut>

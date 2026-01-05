@@ -1,0 +1,9 @@
+{
+	"type": "template",
+	"name": "bluos-nad-c399",
+	"uuid": "a8f3c4e2-1a5b-4d9e-8c7f-2b3a9d6e5f1c",
+	"version": "2.0.0",
+	"id": "bluos-nad-c399-v2",
+	"file": "bluos_nad_c399_enhanced.xml",
+	"templateType": "3"
+}
